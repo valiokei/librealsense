@@ -12,7 +12,7 @@ doc/doxygen/html/
 build*/
 connectivity_check
 
-Tegra/
+/Tegra/
 
 # XCode
 .DS_Store
