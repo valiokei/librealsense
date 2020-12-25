@@ -12,6 +12,8 @@ doc/doxygen/html/
 build*/
 connectivity_check
 
+Tegra/
+
 # XCode
 .DS_Store
 *.pbxuser

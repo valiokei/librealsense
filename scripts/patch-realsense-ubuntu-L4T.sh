@@ -107,11 +107,7 @@ sudo sed -i '/CONFIG_HID_SENSOR_IIO_COMMON/c\CONFIG_HID_SENSOR_IIO_COMMON=m\nCON
 sudo make ARCH=arm64 prepare modules_prepare  -j$(($(nproc)-1))
 
 echo -e "\e[32mApply Librealsense Kernel Patches\e[0m"
-sudo -s patch -p1 < ./LRS_Patches/01-realsense-camera-formats-L4T-4.9.patch
-sudo -s patch -p1 < ./LRS_Patches/02-realsense-metadata-L4T-4.9.patch
-sudo -s patch -p1 < ./LRS_Patches/03-realsense-hid-L4T-4.9.patch
-sudo -s patch -p1 < ./LRS_Patches/04-media-uvcvideo-mark-buffer-error-where-overflow.patch
-sudo -s patch -p1 < ./LRS_Patches/05-realsense-powerlinefrequency-control-fix.patch
+sudo -s patch -p1 < ./LRS_Patches/add-4.4-support.patch
 
 echo -e "\e[32mCompiling uvc module\e[0m"
 #sudo -s make -j -C $KBASE M=$KBASE/drivers/media/usb/uvc/ modules
